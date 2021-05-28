@@ -23,8 +23,8 @@ class Greet {
         }
     }
 
-     public String greetUser(String name, String language) {
-
+     public String greetUser(String command, String name, String language) {
+         String commands = "";
          String userName = name.toLowerCase();
          String lang = "";
          if (!(userList.containsKey(userName))) {
@@ -38,6 +38,13 @@ class Greet {
                  case "English":
                      lang = ("Hello " + userName);
                      break;
+                 case "Counter":
+                     counter();
+                 case "Greeted":
+                     greeted();
+
+                 case "Exit":
+                     exit();
 
 
                  default:
@@ -45,14 +52,20 @@ class Greet {
              }
          }
          System.out.println(lang);
-         return lang;
+         //help();
+
+            return lang;
+
+
+
+
 
      }
 
-    public Object greeted(){
+    public String greeted(){
       //  System.out.println(this.userList);
 
-            return this.userList;
+            return this.userList.toString();
 
     }
     public int counter(){
@@ -74,9 +87,14 @@ class Greet {
     public void help(){
 
         //calls all the methods
+        System.out.println("Enter 'greet' [name] [language] to be greeted");
         System.out.println("Enter 'Greeted' to get greeted user ");
+        System.out.println("Enter 'Greeted' [name] to get specific user counter");
+        System.out.println("Enter Counter to get counter");
         System.out.println("Enter 'Clear' to clear list");
-        System.out.println("Enter counter to get counter");
+        System.out.println("Enter 'Clear' [name] to clear specific user");
+        System.out.println("Enter 'Exit' to end program");
+
 
     }
 
