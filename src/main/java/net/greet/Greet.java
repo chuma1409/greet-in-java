@@ -7,11 +7,14 @@ class Greet {
     HashMap<String, Integer> userList = new HashMap<>();
 
     public int getUserCount(String name) {
+
         String userName = name.toLowerCase();
         if (userList.containsKey(userName)) {
             System.out.println(userName + " has been greeted " + userList.get(userName) + " times");
             return userList.get(userName);
         } else {
+
+            System.out.println("the Entered name is not on the list");
             return 0;
         }
     }
@@ -24,31 +27,33 @@ class Greet {
         }
     }
     public void greetUser(String name, String language) {
-        String userName = name.toLowerCase();
-        String lang = "";
 
-        enterUser(userName);
-            switch (language) {
-                case "isiXhosa":
-                    lang = ("Molo " + userName);
-                    break;
-                case "Afrikaans":
-                    lang = ("Halo " + userName);
-                    break;
-                case "English":
-                    lang = ("Hello " + userName);
-                    break;
-                default:
-                    lang = ("Hi " + userName);
+    String userName = name.toLowerCase();
+    String lang = "";
 
-            }
+    enterUser(userName);
+    switch (language) {
+        case "isiXhosa":
+            lang = ("Molo " + userName);
+            break;
+        case "Afrikaans":
+            lang = ("Halo " + userName);
+            break;
+        case "English":
+            lang = ("Hello " + userName);
+            break;
+        default:
+            lang = ("Hi " + userName);
+
+    }
 
 
-        System.out.println(lang);
+    System.out.println(lang);
 
     }
     public String greeted() {
         //  System.out.println(this.userList);
+
         return this.userList.toString();
     }
     public int counter() {
