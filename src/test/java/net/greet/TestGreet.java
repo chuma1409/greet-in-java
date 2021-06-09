@@ -33,7 +33,7 @@ public class TestGreet {
         test.greetUser("Chuma","isiXhosa");
         test.greetUser("Chuma","English");
         test.greetUser("Musa","Afrikaans");
-        test.greetUser("Chuma","");
+        test.greetUser("Chuma","asdfgh");
         assertEquals(3,test.getUserCount("Chuma"));
     }
     @Test

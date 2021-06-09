@@ -45,7 +45,7 @@ class Greet {
 
 
         System.out.println(lang);
-       // return lang;
+
     }
     public String greeted() {
         //  System.out.println(this.userList);
@@ -72,11 +72,11 @@ class Greet {
     public void help() {
         //calls all valid commands
         System.out.println("Enter 'greet' [name] [language] to be greeted");
-        System.out.println("Enter 'Greeted' to get greeted user ");
-        System.out.println("Enter 'Greeted' [name] to get specific user counter");
-        System.out.println("Enter Counter to get counter");
-        System.out.println("Enter 'Clear' to clear list");
-        System.out.println("Enter 'Clear' [name] to clear specific user");
-        System.out.println("Enter 'Exit' to end program");
+        System.out.println("Enter 'greeted' to get greeted user ");
+        System.out.println("Enter 'greeted' [name] to get specific user counter");
+        System.out.println("Enter counter to get counter");
+        System.out.println("Enter 'clear' to clear list");
+        System.out.println("Enter 'clear' [name] to clear specific user");
+        System.out.println("Enter 'exit' to end program");
     }
 }
